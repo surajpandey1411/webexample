@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Example</title>
+<body>
+<script type="text/javascript">
+       // *****  include the getXMLHttpRequest function defined before
+var ajaxRequest = getXMLHttpRequest();  
+
+if (ajaxRequest) {   //  if the object was created successfully
+
+      ajaxRequest.onreadystatechange = ajaxResponse;  
+      ajaxRequest.open("GET", "search.php?query=Bob");
+      ajaxRequest.send(null);
+   }
+
+
+function ajaxResponse()  //This gets called when the readyState changes.  
+{
+   if (ajaxRequest.readyState != 4)  //  check to see if we’re done
+      {  return;  }
+   else {
+     if (ajaxRequest.status == 200) //  check to see if successful
+          {   //  process server data here. . . 
+            }
+     else 
+     {
+       alert("Request failed: " + ajaxRequest.statusText);
+          }
+     }
+}
+</script>
+</body>
+</html>

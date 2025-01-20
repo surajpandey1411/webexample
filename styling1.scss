@@ -1,0 +1,12 @@
+$fs:300px;
+$bgcolr: #00ff40;
+$col2: #ff0066e1;
+$pd: 100px 350px;
+#d1{
+    font-size: $fs;
+    color: $bgcolor;
+    padding: $pd;
+    li{
+        color:$col2;
+    }
+}

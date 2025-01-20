@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>AJAX Example</h1>
+    <button id="loadButton">Load Data</button>
+    <div id="content"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#loadButton").click(function() {
+                $.ajax({
+                    url: "https://api.example.com/data", // Replace with your API endpoint
+                    method: "GET",
+                    success: function(data) {
+                        $("#content").html(data);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

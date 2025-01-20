@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Example</title>
+    <!-- Include jQuery from a CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>AJAX Example with jQuery</h1>
+    <button id="loadQuoteButton">Load Random Quote</button>
+    <div id="quote"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#loadQuoteButton").click(function() {
+                $.ajax({
+                    url: "https://api.quotable.io/random", // URL to fetch a random quote
+                    method: "GET",
+                    success: function(data) {
+                        $("#quote").html("<p>" + data.content + "</p><p><em>— " + data.author + "</em></p>");
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

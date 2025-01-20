@@ -1,0 +1,13 @@
+{
+  "name": "Jane Doe",
+  "age": 25,
+  "email": "janedoe@example.com",
+  "isStudent": true,
+  "skills": ["JavaScript", "Python", "HTML", "CSS"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Somewhere",
+    "state": "CA",
+    "postalCode": "12345"
+  }
+}
