@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>
+        login form
+    </title>
+    <link rel="stylesheet" href="lgnstyle.css" type="text/css">
+    <body>
+        <div>
+        <form>
+            <h1>Facebook</h1>
+    
+                    Username:<input type="text" name="user1"><br/><br/>
+                    Password:<input type="pass" name="pass1">
+                    <label class="custom-field">
+                        <input type="email"/>
+                        <span class="placeholder">Enter Email</span>
+                      </label>
+                      <label class="custom-field" aria-label="Enter Email">
+                        <input type="email"/>
+                      </label>
+                      // create the placeholder element
+                      .custom-field::after {
+                        content: attr(aria-label);
+                      }
+</body>
+</html>
